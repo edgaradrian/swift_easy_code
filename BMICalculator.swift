@@ -5,7 +5,7 @@ import UIKit
 
 func getBMI(massKg : Double, heightM : Double) -> Double {
     var bmi : Double = 0.0
-    bmi = massKg / heightM
+    bmi = massKg / ( heightM * heightM )
 
     if bmi > 25 {
         print("overweight")
