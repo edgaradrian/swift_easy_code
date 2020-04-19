@@ -32,10 +32,14 @@ struct MyStack<Element> {
 var intStack = MyStack<Int>()
 intStack.push(1)
 intStack.push(2)
+var doubleStack = intStack.map { $0 * 2 }
 
 print(intStack.pop())
 print(intStack.pop())
 print(intStack.pop())
+
+print(doubleStack.pop())
+print(doubleStack.pop())
 
 //String example
 var stringStack = MyStack<String>()
