@@ -1,14 +1,14 @@
 import UIKit
 
-struct MyStack {
+struct MyStack<Element> {
     
-    var items = [Int]()
+    var items = [Element]()
     
-    mutating func push(_ item: Int) {
+    mutating func push(_ item: Element) {
         items.append(item)
     }//push
     
-    mutating func pop() -> Int? {
+    mutating func pop() -> Element? {
         
         guard !items.isEmpty else {
             return nil
@@ -20,10 +20,12 @@ struct MyStack {
     
 }//MyStack
 
-var intStack = MyStack()
+var intStack = MyStack<Int>()
 intStack.push(1)
 intStack.push(2)
 
 print(intStack.pop())
 print(intStack.pop())
 print(intStack.pop())
+
+
