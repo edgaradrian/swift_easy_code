@@ -19,3 +19,11 @@ struct MyStack {
     }//pop
     
 }//MyStack
+
+var intStack = MyStack()
+intStack.push(1)
+intStack.push(2)
+
+print(intStack.pop())
+print(intStack.pop())
+print(intStack.pop())
