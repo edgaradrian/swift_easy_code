@@ -18,6 +18,15 @@ struct MyStack<Element> {
         
     }//pop
     
+    func map<U>(_ f: (Element) -> U) -> MyStack<U> {
+        var mappedItems = [U]()
+        for item in items {
+            mappedItems.append(f(item))
+        }
+        return MyStack<U>(items: mappedItems)
+    }//map
+
+    
 }//MyStack
 
 var intStack = MyStack<Int>()
