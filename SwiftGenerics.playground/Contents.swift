@@ -35,6 +35,14 @@ stringStack.push("another string")
 
 print(stringStack.pop())
 
+func myMap<T,U>(_ items: [T], _ f: (T) -> (U)) -> [U] {
+    var result = [U]()
+    for item in items {
+        result.append(f(item))
+    }//for item
+    return result
+}//myMap
+
 
 
 
