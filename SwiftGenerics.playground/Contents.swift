@@ -28,4 +28,14 @@ print(intStack.pop())
 print(intStack.pop())
 print(intStack.pop())
 
+//String example
+var stringStack = MyStack<String>()
+stringStack.push("This is a String")
+stringStack.push("another string")
+
+print(stringStack.pop())
+
+
+
+
 
