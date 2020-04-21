@@ -29,6 +29,18 @@ struct MyStack<Element> {
     
 }//MyStack
 
+struct StackIterator<T>: IteratorProtocol {
+    
+    typealias Element = T
+    
+    var stack: MyStack<T>
+
+    mutating func next() -> Element? {
+        return stack.pop()
+    }
+    
+}//StackIterator
+
 var intStack = MyStack<Int>()
 intStack.push(1)
 intStack.push(2)
