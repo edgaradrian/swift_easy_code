@@ -1,6 +1,6 @@
 import UIKit
 
-struct MyStack<Element> {
+struct MyStack<Element>: Sequence {
     
     var items = [Element]()
     
@@ -72,6 +72,10 @@ newStack.push(30)
 var myStackInteractor = StackIterator(stack: newStack)
 while let value = myStackInteractor.next() {
     print("pop: \(value)")
+}
+
+for value in newStack {
+    print("for-in loop: \(value)")
 }
 
 func myMap<T,U>(_ items: [T], _ f: (T) -> (U)) -> [U] {
