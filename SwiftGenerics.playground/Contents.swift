@@ -60,6 +60,16 @@ stringStack.push("another string")
 
 print(stringStack.pop())
 
+var newStack = MyStack<Int>()
+newStack.push(10)
+newStack.push(20)
+newStack.push(30)
+
+var myStackInteractor = StackIterator(stack: newStack)
+while let value = myStackInteractor.next() {
+    print("pop: \(value)")
+}
+
 func myMap<T,U>(_ items: [T], _ f: (T) -> (U)) -> [U] {
     var result = [U]()
     for item in items {
