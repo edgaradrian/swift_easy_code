@@ -60,6 +60,14 @@ let strings = ["I","II","III"]
 let stringLengths = myMap(strings) { $0.count }
 print(stringLengths)
 
+func checkIfEqual<T: Equatable>(_ first: T, _ second: T) -> Bool {
+    return first == second
+}//checkIfEqual
+
+print(checkIfEqual(1, 1))
+print(checkIfEqual("a string", "a string"))
+print(checkIfEqual("a string", "a different string"))
+
 
 
 
