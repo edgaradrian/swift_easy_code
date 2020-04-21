@@ -25,6 +25,10 @@ struct MyStack<Element> {
         }
         return MyStack<U>(items: mappedItems)
     }//map
+    
+    func makeIterator() -> StackIterator<Element> {
+        return StackIterator(stack: self)
+    }//makeIterator
 
     
 }//MyStack
