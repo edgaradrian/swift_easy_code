@@ -30,7 +30,7 @@ struct MyStack<Element>: Sequence {
         return StackIterator(stack: self)
     }//makeIterator
     
-    mutating func pushAll(_ items: [Element]) {
+    mutating func pushAll<S: Sequence>(_ items: S) where S.Iterator.Element == Element {
         for item in items {
             self.push(item)
         }
