@@ -89,6 +89,14 @@ for value in newStack {
     print("after pushing: got \(value)")
 }
 
+var myOtherStack = MyStack<Int>()
+myOtherStack.pushAll([4,5,6])
+newStack.pushAll(myOtherStack)
+for value in newStack {
+    print("after pushing items onto stack, got \(value)")
+}
+
+
 func myMap<T,U>(_ items: [T], _ f: (T) -> (U)) -> [U] {
     var result = [U]()
     for item in items {
