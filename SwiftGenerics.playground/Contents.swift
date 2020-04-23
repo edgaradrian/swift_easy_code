@@ -29,6 +29,12 @@ struct MyStack<Element>: Sequence {
     func makeIterator() -> StackIterator<Element> {
         return StackIterator(stack: self)
     }//makeIterator
+    
+    mutating func pushAll(_ items: [Element]) {
+        for item in items {
+            self.push(item)
+        }
+    }
 
     
 }//MyStack
@@ -76,6 +82,11 @@ while let value = myStackInteractor.next() {
 
 for value in newStack {
     print("for-in loop: \(value)")
+}
+
+newStack.pushAll([1,2,3])
+for value in newStack {
+    print("after pushing: got \(value)")
 }
 
 func myMap<T,U>(_ items: [T], _ f: (T) -> (U)) -> [U] {
