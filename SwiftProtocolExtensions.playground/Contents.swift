@@ -48,3 +48,6 @@ extension Sequence where Iterator.Element == Exercise {
         return total
     }//totalCaloriesBurned
 }//extension Sequence
+
+let mondayWorkout: [Exercise] = [ellipticalWorkout, runningWorkout]
+print(mondayWorkout.totalCaloriesBurned())
