@@ -27,6 +27,12 @@ struct TreadmillWorkout: Exercise {
     let laps: Double
 }//TreadmillWorkout
 
+extension TreadmillWorkout {
+    var description: String {
+        return "TreadmillWorkout(\(caloriesBurned) calories and \(laps) laps in \(minutes) minutes)"
+    }
+}
+
 let runningWorkout = TreadmillWorkout(caloriesBurned: 350, minutes: 25, laps: 10.2)
 
 func caloriesBurnedPerMinute<E: Exercise>(for exercise: E) -> Double {
