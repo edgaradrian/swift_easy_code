@@ -163,6 +163,25 @@ print(findAll(arrayString, "a"))
 
 //Silver Challenge
 
+//Gold Challenge
+func findAll2<T:Equatable, U:Collection>(_ array:[U], _ element:T) -> [U] where U.Iterator.Element == T {
+    var positions = [U]()
+    var count = 0
+    for collections in array{
+        if let _ = collections.firstIndex(of: element) {
+            positions.insert(collections, at: count)
+            count += 1
+        }
+    }
+    
+    return positions
+}
+
+let array2 = [2,2,2,2,2]
+let array3 = [3,33,333,3333]
+let array4 = [1,2,3,4]
+print(findAll2([arrayInt, array2, array3, array4], 1))
+//Gold Challenge
 
 
 
