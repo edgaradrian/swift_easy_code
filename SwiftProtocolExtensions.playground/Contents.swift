@@ -35,3 +35,6 @@ extension Exercise {
         return caloriesBurned / minutes
     }
 }//extension Exercise
+
+print(ellipticalWorkout.caloriesBurnedPerMinute)
+print(runningWorkout.caloriesBurnedPerMinute)
