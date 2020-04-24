@@ -142,6 +142,27 @@ print(checkIfDescriptionMatch(Int(1), UInt(1)))
 print(checkIfDescriptionMatch(1, 1.0))
 print(checkIfDescriptionMatch(Float(1.0), Double(1.0)))
 
+//Silver Challenge
+func findAll<T: Equatable>(_ array:[T], _ element:T) -> [Int] {
+    var positions = [Int]()
+    var count = 0
+    for item in array {
+        if item == element {
+            positions.append(count)
+        }
+        count += 1
+    }
+    return positions
+}//findAll
+
+let arrayInt = [1,1,1,3,4,11,1,3,4,11,9]
+print(findAll(arrayInt, 1))
+
+let arrayString = ["a","b","c","d","c","b","a"]
+print(findAll(arrayString, "a"))
+
+//Silver Challenge
+
 
 
 
