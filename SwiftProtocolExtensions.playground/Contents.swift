@@ -45,6 +45,9 @@ extension Exercise {
 print(ellipticalWorkout.caloriesBurnedPerMinute)
 print(runningWorkout.caloriesBurnedPerMinute)
 
+print(ellipticalWorkout)
+print(runningWorkout)
+
 extension Sequence where Iterator.Element == Exercise {
     func totalCaloriesBurned() -> Double {
         var total: Double = 0
