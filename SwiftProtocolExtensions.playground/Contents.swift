@@ -12,6 +12,12 @@ struct EllipticalWorkout: Exercise {
     let minutes: Double
 }//EllipticalWorkout
 
+extension Exercise {
+    var description: String {
+        return "Exercise(\(name), burned \(caloriesBurned) calories in \(minutes) minutes)"
+    }
+}
+
 let ellipticalWorkout = EllipticalWorkout(caloriesBurned: 335, minutes: 30)
 
 struct TreadmillWorkout: Exercise {
