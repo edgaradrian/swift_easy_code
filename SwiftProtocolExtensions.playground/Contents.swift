@@ -28,6 +28,7 @@ let ellipticalWorkout = EllipticalWorkout(caloriesBurned: 335, minutes: 30)
 
 struct TreadmillWorkout: Exercise {
     let name = "Treadmill Workout"
+    let title = "Workout using the Go Fast Elliptical Trainer 3000"
     let caloriesBurned: Double
     let minutes: Double
     let laps: Double
