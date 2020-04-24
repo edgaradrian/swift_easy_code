@@ -35,6 +35,18 @@ struct MyStack<Element>: Sequence {
             self.push(item)
         }
     }
+    
+    //Bronze Challenge
+    func filter(_ f: (Element) -> Bool) -> MyStack<Element> {
+        var filterItems = [Element]()
+        for item in items {
+            if f(item) {
+                filterItems.append(item)
+            }
+        }
+        return MyStack<Element>(items: filterItems)
+    }//filter
+    //Bronze Challenge
 
     
 }//MyStack
@@ -96,6 +108,11 @@ for value in newStack {
     print("after pushing items onto stack, got \(value)")
 }
 
+//Bronze Challenge
+var aNewStack = MyStack<Int>()
+aNewStack.pushAll([1,1,1,2,3,4])
+var filterANewStack = aNewStack.filter { $0 == 1 }
+print(filterANewStack)
 
 func myMap<T,U>(_ items: [T], _ f: (T) -> (U)) -> [U] {
     var result = [U]()
