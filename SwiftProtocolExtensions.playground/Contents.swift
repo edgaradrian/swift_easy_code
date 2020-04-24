@@ -23,3 +23,9 @@ struct TreadmillWorkout: Exercise {
 
 let runningWorkout = TreadmillWorkout(caloriesBurned: 350, minutes: 25, laps: 10.2)
 
+func caloriesBurnedPerMinute<E: Exercise>(for exercise: E) -> Double {
+    return exercise.caloriesBurned / exercise.minutes
+}//caloriesBurnedPerMinute
+
+print(caloriesBurnedPerMinute(for: ellipticalWorkout))
+print(caloriesBurnedPerMinute(for: runningWorkout))
