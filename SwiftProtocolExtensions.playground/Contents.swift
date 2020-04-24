@@ -1,6 +1,6 @@
 import UIKit
 
-protocol Exercise {
+protocol Exercise: CustomStringConvertible {
     var name: String { get }
     var caloriesBurned: Double { get }
     var minutes: Double { get }
