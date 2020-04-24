@@ -29,3 +29,9 @@ func caloriesBurnedPerMinute<E: Exercise>(for exercise: E) -> Double {
 
 print(caloriesBurnedPerMinute(for: ellipticalWorkout))
 print(caloriesBurnedPerMinute(for: runningWorkout))
+
+extension Exercise {
+    var caloriesBurnedPerMinute: Double {
+        return caloriesBurned / minutes
+    }
+}//extension Exercise
