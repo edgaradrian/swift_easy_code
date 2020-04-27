@@ -8,5 +8,9 @@
 
 import Foundation
 
-print("Hello, World!")
+var edgar: Person? = Person(name: "Edgar")
+print("created \(edgar)")
+
+edgar = nil
+print("the edgar variable is now \(edgar)")
 
