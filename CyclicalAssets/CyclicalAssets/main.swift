@@ -15,6 +15,9 @@ var laptop: Asset? = Asset(name: "Shiny Laptop", value: 1_500.0)
 var hat: Asset? = Asset(name: "Cowboy Hat", value: 175.0)
 var backpack: Asset? = Asset(name: "Blue Backpack", value: 45.0)
 
+edgar?.takeOwnership(of: laptop!)
+edgar?.takeOwnership(of: hat!)
+
 edgar = nil
 print("the edgar variable is now \(edgar)")
 
