@@ -1,6 +1,6 @@
 import UIKit
 
-struct Point {
+struct Point: Equatable {
     let x: Int
     let y: Int
 }//Point
