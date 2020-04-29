@@ -18,8 +18,9 @@ class Accountant {
         }
     }//netWorth
     
-    func gained(_ asset: Asset) {
+    func gained(_ asset: Asset, completion: () -> Void) {
         netWorth += asset.value
+        completion()
     }//gained
     
 }//Accountant class
