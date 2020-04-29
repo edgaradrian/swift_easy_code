@@ -34,12 +34,17 @@ class Person: CustomStringConvertible {
     }//deinit
     
     func takeOwnership(of asset: Asset) {
-        
+        //Silver Challenge
         accountant.gained(asset) {
-            asset.owner = self
-            assets.append(asset)
+            guard let owner = asset.owner else {
+                asset.owner = self
+                assets.append(asset)
+                return
+            }
+         
+            print("Sorry! \(asset) belongs to \(owner)")
         }
-        
+        //Silver Challenge
     }//takeOwnership
     
     func netWorthDidChange(to netWorth: Double) {
