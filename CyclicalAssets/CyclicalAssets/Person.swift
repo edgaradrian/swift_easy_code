@@ -35,15 +35,15 @@ class Person: CustomStringConvertible {
     
     func takeOwnership(of asset: Asset) {
         //Silver Challenge
-        accountant.gained(asset) {
-            guard let owner = asset.owner else {
+        guard let owner = asset.owner else {
+        
+            accountant.gained(asset) {
                 asset.owner = self
                 assets.append(asset)
-                return
             }
-         
-            print("Sorry! \(asset) belongs to \(owner)")
+            return
         }
+        print("Sorry! \(asset) belongs to \(owner)")
         //Silver Challenge
     }//takeOwnership
     
