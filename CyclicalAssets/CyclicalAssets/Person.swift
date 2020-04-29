@@ -46,4 +46,9 @@ class Person: CustomStringConvertible {
         print("The net worth of \(self) is now \(netWorth)")
     }//netWorthDidChange
     
+    func useNetWorthChangedHandler(handler: (Double) -> Void) {
+        accountant.netWorthChangedHandler = handler
+    }//useNetWorthChangedHandler
+    
+    
 }//Person class
