@@ -1,12 +1,16 @@
 import UIKit
 
-struct Point: Equatable {
+struct Point: Equatable, Comparable {
     let x: Int
     let y: Int
     
     static func ==(lhs: Point, rhs: Point) -> Bool {
         return (lhs.x == rhs.x) && (lhs.y == rhs.y)
     }//==
+    
+    static func <(lhs: Point, rhs: Point) -> Bool {
+        return (lhs.x < rhs.x) && (lhs.y < rhs.y)
+    }//<
     
 }//Point
 
