@@ -34,9 +34,12 @@ class Person: CustomStringConvertible {
     }//deinit
     
     func takeOwnership(of asset: Asset) {
-        asset.owner = self
-        assets.append(asset)
-        accountant.gained(asset)
+        
+        accountant.gained(asset) {
+            asset.owner = self
+            assets.append(asset)
+        }
+        
     }//takeOwnership
     
     func netWorthDidChange(to netWorth: Double) {
