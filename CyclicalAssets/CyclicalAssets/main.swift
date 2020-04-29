@@ -15,6 +15,10 @@ var laptop: Asset? = Asset(name: "Shiny Laptop", value: 1_500.0)
 var hat: Asset? = Asset(name: "Cowboy Hat", value: 175.0)
 var backpack: Asset? = Asset(name: "Blue Backpack", value: 45.0)
 
+edgar?.useNetWorthChangedHandler { netWorth in
+    print("Edgar's net worth is now \(netWorth)")
+}
+
 edgar?.takeOwnership(of: laptop!)
 edgar?.takeOwnership(of: hat!)
 
