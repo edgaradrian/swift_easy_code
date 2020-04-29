@@ -23,3 +23,7 @@ let d = Point(x: 3, y: 7)
 
 let cdEqual = (c == d)
 let cLessThanD = (c < d)
+
+let cLessThanEqualD = (c <= d)
+let cGreaterThanD = (c > d)
+let cGreaterThanEqualD = (c >= d)
